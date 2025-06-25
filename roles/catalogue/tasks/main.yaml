@@ -1,9 +1,9 @@
-- name: app setup
+- name: app-setup
   include_rule: 
     name: common
     tasks_from: app-setup
 
-- name: nodejs setup
+- name: nodejs-setup
   include_rule: 
     name: common
     tasks_from: nodejs
@@ -30,7 +30,7 @@
   ansible.builtin.shell: mongosh --host mongodb.shamrobos.site < /app/db/master-data.js # you have to use shell command because it consist of special characters like >
   when: catalogue_output.stdout | int < 0
 
-- name: systemd setup
+- name: systemd-setup
   include_rule: 
     name: common
     tasks_from: systemd.yaml
