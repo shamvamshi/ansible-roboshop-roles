@@ -1,1 +1,3 @@
  CATALOGUE_HOST: catalogue.shamrobos.site
+ USER_HOST: user.shamrobos.site
+ CART_HOST: cart.shamrobos.site
