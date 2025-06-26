@@ -36,17 +36,17 @@
     dest: /usr/share/nginx/html
     remote_src: yes  # You use it when the source file already exists on the remote machine, and you don't want Ansible to copy it from your local machine.
 
-- name: remove nginx default configurations
+- name: remove nginx default conf
   ansible.builtin.file:
     path: /etc/nginx/nginx.conf
     state: absent
     
-- name: copy roboshop nginx configurations
+- name: copy roboshop nginx conf
   ansible.builtin.template:
     src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf
   notify:  # notify will check in what is mentioned in handlers, then it will trigger restart
-    - restart nginx
+    - Restart nginx
 
 # - name: restart nginx
   
