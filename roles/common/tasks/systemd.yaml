@@ -12,3 +12,4 @@
     name: "{{ component }}"
     state: restarted  # you can restart even app is not running we can restart
     enabled: yes
+    
