@@ -2,7 +2,6 @@
   include_role: 
     name: common
     tasks_from: app-setup
-  when:
 
 - name: nodejs setup
   include_role: 
